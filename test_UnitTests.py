@@ -35,7 +35,7 @@ def test_Forecast_nPeriod():
     # Unit Tests:
     initialStates = np.array([[20, 30, 10]])  # Row vector in numpy
     # 3x3 transition matrix
-    tmat = np.array([[1, .5, 0], [0, .5, 0], [0, 0, 1]])
+    tmat = np.array([[1, 0, 0], [.5, .5, 0], [1, 0, 0]])
 
     states1 = HW4_Functions_File.Forecast_nPeriod(initialStates, tmat, 1)
     states2 = HW4_Functions_File.Forecast_nPeriod(initialStates, tmat, 2)
@@ -47,7 +47,7 @@ def test_Forecast_nPeriod():
 def test_Forecast_nPeriod_Recursive():
     # Example vector and matrix setup
     initialStates = np.array([[20, 30, 10]])  # Row vector in numpy
-    tmat = np.array([[1, 0.5, 0], [0, 0.5, 0], [0, 0, 1]])  # Transition matrix
+    tmat = np.array([[1, 0, 0], [.5, .5, 0], [1, 0, 0]]) # Transition matrix
 
     # Unit Tests:
     states1 = HW4_Functions_File.Forecast_nPeriod_Recursive(initialStates, tmat, 1)
